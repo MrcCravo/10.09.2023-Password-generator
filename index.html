@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta nome="keywords" content="Gerador de senhas, número da sorte, password">
-    <title>Gerador de Senha</title>
+    <title>Gerador de Senhas</title>
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <img class="logo" src="./assets/logo.png" alt="Gerador de senha logo"/>
+
     <main class="container-input">
         <span>Tamanho <span id="valor"></span> caracteres</span>
-        <input id="slider" class="slider" type="range" min="4" max="18" value="11"/>
+        <input id="slider" class="slider" type="range" min="5" max="25" value="15"/>
 
-        <button id="button" class="button-cta">Gerar Senha</button>
-
+        <button id="button" class="button-cta" onclick="generatePassword()">Gerar Senha</button>
     </main>
 
-    <div id="container-password" class="container-password hide">
-      <span class="title">Sua senha gerada foi:</span>  
-      <span id="password" class="password">123123123123123</span>  
-      <span class="tooltip">Clique na senha para copiar</span>
+    <div id="container-password" onclick="copyPassword()" class="container-password hide">
+        <span class="title">Sua senha gerada foi:</span>  
+        <span id="password" class="password">123123123123123</span>  
+        <span class="tooltip">Clique na senha para copiar 👆</span>       
     </div>
-
-
 
     <script src="script.js"></script>
 </body>
@@ -33,3 +32,4 @@
 
 <!--https://www.youtube.com/watch?v=i6t2jaRxos4-->
 <!--Este projeto tem o intuito de desenvolver um gerador de senhas onde o usuário possa definir a quantidade de carcteres -->
+
